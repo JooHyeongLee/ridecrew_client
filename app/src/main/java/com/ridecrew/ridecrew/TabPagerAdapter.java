@@ -4,8 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-
-
 public class TabPagerAdapter extends FragmentStatePagerAdapter{
 
     private int tabCount;
@@ -19,17 +17,17 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter{
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                ScheduleFragment tabFragment1 = new ScheduleFragment();
-                return tabFragment1;
+                ScheduleFragment schedule = new ScheduleFragment();
+                return schedule;
             case 1:
-                NoticeFragment tabFragment2 = new NoticeFragment();
-                return tabFragment2;
+                NoticeFragment notice = new NoticeFragment();
+                return notice;
             case 2:
-                ListFragment tabFragment3 = new ListFragment();
-                return tabFragment3;
+                ListFragment list = new ListFragment();
+                return list;
             case 3:
-                GalleryFragment tabFragment4 = new GalleryFragment();
-                return tabFragment4;
+                GalleryFragment gallery = new GalleryFragment();
+                return gallery;
             default:
                 return null;
         }
