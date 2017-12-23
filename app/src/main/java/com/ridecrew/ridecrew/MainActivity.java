@@ -1,5 +1,7 @@
 package com.ridecrew.ridecrew;
 
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -101,5 +103,12 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+        //스케쥴 데이터 출력
+        ScheduleFragment scheduleList = new ScheduleFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.placeholder,scheduleList);
+        fragmentTransaction.commit();
     }
 }
